@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.activity.OverViewVocabularyActivity">
+
+    <LinearLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="UseCompoundDrawables">
+
+        <ImageView
+            android:id="@+id/btn_close_overview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:importantForAccessibility="no"
+            android:src="@drawable/close" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/black"
+            android:fontFamily="sans-serif-medium"
+            android:text="Grammar Lvl 1"
+            android:textAlignment="center"
+            android:textSize="24sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/headerLayout">
+
+        <TextView
+            android:id="@+id/number"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Question 1"
+            android:textColor="@color/blue_sky" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_search"
+            android:backgroundTint="#EFF8FF"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="5dp"
+            android:text="15 start"
+            android:textAlignment="textEnd"
+            android:textColor="@color/blue_sky" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/vocabularyLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout4"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:src="@mipmap/hello"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/questionLayout" />
+
+        <LinearLayout
+            android:id="@+id/wordLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imageView3">
+
+            <TextView
+                android:id="@+id/en"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:padding="10dp"
+                android:text="hello"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:padding="10dp"
+                android:src="@drawable/volume_high" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/vi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="sans-serif-medium"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="5dp"
+            android:text="Xin chào"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vi" />
+
+        <TextView
+            android:id="@+id/pronunciation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_example"
+            android:fontFamily="sans-serif-medium"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="5dp"
+            android:text="/hə.loʊ/"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vi" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="@drawable/bg_example"
+            android:orientation="vertical"
+            android:padding="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/pronunciation">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:src="@drawable/message_question_gray" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:padding="5dp"
+                    android:text="Example"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/example"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp"
+                android:lineHeight="20dp"
+                android:padding="5dp"
+                android:text="• Hello, I am the new student and my name is Sarah."
+                android:textColor="@color/black" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_last"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/border_image"
+            android:text="Last"
+            android:textColor="@color/white" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_next"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/border_image"
+            android:text="Next"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

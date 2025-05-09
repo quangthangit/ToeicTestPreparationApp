@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue_sky"
+    android:gravity="center"
+    tools:context=".ui.fragment.VocabularyFragment">
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:fontFamily="serif-monospace"
+        android:text="Vocabulary"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText,MissingConstraints" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="10dp"
+        app:cardCornerRadius="10dp"
+        app:cardUseCompatPadding="true"
+        app:cardBackgroundColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5">
+
+        <EditText
+            android:id="@+id/btn_filter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:drawablePadding="10dp"
+            android:background="@drawable/border_search"
+            android:hint="Search"
+            android:drawableStart="@drawable/search"
+            android:drawableEnd="@drawable/filter"
+            android:inputType="text"
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            tools:ignore="HardcodedText" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/listTopic"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/border_listview"
+        android:padding="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="52dp">
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:indeterminate="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <include
+        android:id="@+id/emptyView"
+        layout="@layout/view_empty_data"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/cardView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -82,19 +82,16 @@ class LoginFragment : Fragment() {
                 errorPassword.visibility = View.GONE
             }
 
-            if (isValid) {
-                Toast.makeText(context, "Đăng nhập thành công", Toast.LENGTH_SHORT).show()
-            }
-
             val username = edtUsername.text.toString()
             val password = edtPassword.text.toString()
-            authViewModel.login(username, password)
+            authViewModel.login(requireContext(),username, password)
         }
 
         authViewModel.loginResult.observe(viewLifecycleOwner, { result ->
             result.onSuccess {
                 val intent = Intent(context, HomeActivity::class.java)
                 startActivity(intent)
+                requireActivity().finish()
             }.onFailure {
 
             }

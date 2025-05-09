@@ -50,7 +50,7 @@
         android:layout_height="wrap_content"
         android:background="@drawable/bg_edittext"
         android:fontFamily="serif-monospace"
-        android:hint="Nhập nội dung..."
+        android:hint="Enter you email"
         android:textColor="@color/black"
         android:inputType="text"
         android:layout_margin="20dp"
@@ -80,21 +80,23 @@
         android:text="Input Your password"
         android:textColor="@color/blue_sky"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/errorUsername" />
+        app:layout_constraintTop_toBottomOf="@+id/errorUsername"
+        tools:ignore="HardcodedText" />
 
     <EditText
         android:id="@+id/passwordInput"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/bg_edittext"
-        android:hint="Nhập nội dung..."
+        android:hint="Enter you password"
         android:fontFamily="serif-monospace"
         android:textColor="@color/black"
-        android:inputType="text"
+        android:inputType="textPassword"
         android:layout_margin="20dp"
         android:padding="14dp"
         android:textSize="16sp"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        tools:ignore="HardcodedText,TextFields" />
 
     <TextView
         android:id="@+id/errorPassword"
@@ -107,7 +109,8 @@
         android:textColor="#E25C5C"
         android:visibility="gone"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/passwordInput" />
+        app:layout_constraintTop_toBottomOf="@+id/passwordInput"
+        tools:ignore="HardcodedText" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_login"
@@ -115,6 +118,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
         android:text="LOGIN"
+        android:fontFamily="serif-monospace"
         android:backgroundTint="@color/blue_sky"
         android:textColor="@color/white"
         android:background="@drawable/bg_edittext"

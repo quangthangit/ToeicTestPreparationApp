@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.activity.QuizVocabularyActivity">
+
+    <!-- Header with close button and title -->
+    <LinearLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/btn_close_quiz"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/close" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="sans-serif-medium"
+            android:text="Quiz"
+            android:textColor="@color/black"
+            android:textAlignment="center"
+            android:textSize="24sp" />
+    </LinearLayout>
+
+    <!-- Question section -->
+    <LinearLayout
+        android:id="@+id/questionLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/headerLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Question 1"
+            android:textColor="@color/blue_sky" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_search"
+            android:backgroundTint="#EFF8FF"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="5dp"
+            android:text="15 start"
+            android:textAlignment="textEnd"
+            android:textColor="@color/blue_sky" />
+    </LinearLayout>
+
+    <!-- Main image -->
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:src="@mipmap/hello"
+        app:layout_constraintTop_toBottomOf="@id/questionLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/question"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="What is the name of the object in the picture?"
+        android:layout_margin="20dp"
+        android:textColor="@color/black"
+        android:fontFamily="sans-serif-medium"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+    <TextView
+        android:id="@+id/textt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Fill in the blank with the correct answer"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="10dp"
+        android:textColor="#797979"
+        app:layout_constraintTop_toBottomOf="@+id/question" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="20dp"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintTop_toBottomOf="@+id/textt">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hello"
+            android:textColor="@color/black"
+            android:elevation="0dp"
+            app:elevation="0dp"
+            android:stateListAnimator="@null"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_answer"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="Hi"
+            android:elevation="0dp"
+            app:elevation="0dp"
+            android:stateListAnimator="@null"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_answer"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="Crask"
+            android:elevation="0dp"
+            app:elevation="0dp"
+            android:stateListAnimator="@null"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_answer"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="Pulpen"
+            android:elevation="0dp"
+            app:elevation="0dp"
+            android:stateListAnimator="@null"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_answer"
+            />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
