@@ -32,7 +32,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:textColor="@color/black"
-            android:fontFamily="sans-serif-medium"
+            android:fontFamily="serif"
             android:text="Grammar Lvl 1"
             android:textAlignment="center"
             android:textSize="24sp" />
@@ -54,6 +54,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Question 1"
+            android:fontFamily="serif"
             android:textColor="@color/blue_sky" />
 
         <TextView
@@ -63,6 +64,7 @@
             android:backgroundTint="#EFF8FF"
             android:paddingHorizontal="20dp"
             android:paddingVertical="5dp"
+            android:fontFamily="serif"
             android:text="15 start"
             android:textAlignment="textEnd"
             android:textColor="@color/blue_sky" />
@@ -103,7 +105,7 @@
                 android:id="@+id/en"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-medium"
+                android:fontFamily="serif"
                 android:padding="10dp"
                 android:text="hello"
                 android:textColor="@color/black"
@@ -122,7 +124,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:fontFamily="sans-serif-medium"
+            android:fontFamily="serif"
             android:paddingHorizontal="10dp"
             android:paddingVertical="5dp"
             android:text="Xin chào"
@@ -137,7 +139,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="10dp"
             android:background="@drawable/bg_example"
-            android:fontFamily="sans-serif-medium"
+            android:fontFamily="serif"
             android:paddingHorizontal="10dp"
             android:paddingVertical="5dp"
             android:text="/hə.loʊ/"
@@ -173,6 +175,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:padding="5dp"
+                    android:fontFamily="serif"
                     android:text="Example"
                     android:textColor="@color/black" />
             </LinearLayout>
@@ -184,6 +187,7 @@
                 android:layout_marginVertical="10dp"
                 android:lineHeight="20dp"
                 android:padding="5dp"
+                android:fontFamily="serif"
                 android:text="• Hello, I am the new student and my name is Sarah."
                 android:textColor="@color/black" />
         </LinearLayout>
@@ -206,6 +210,7 @@
             android:layout_weight="1"
             android:background="@drawable/border_image"
             android:text="Last"
+            android:fontFamily="serif"
             android:textColor="@color/white" />
 
         <androidx.appcompat.widget.AppCompatButton
@@ -216,6 +221,7 @@
             android:layout_weight="1"
             android:background="@drawable/border_image"
             android:text="Next"
+            android:fontFamily="serif"
             android:textColor="@color/white" />
 
     </LinearLayout>

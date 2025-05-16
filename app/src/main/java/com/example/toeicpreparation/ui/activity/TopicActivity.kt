@@ -81,7 +81,7 @@ class TopicActivity : AppCompatActivity() {
         viewModel.subTopics.observe(this) { result ->
             result.onSuccess { list ->
                 if (list.isEmpty()) {
-                    recyclerView.visibility = View.GONE
+//                    recyclerView.visibility = View.GONE
                     emptyView.visibility = View.VISIBLE
                 } else {
                     adapter.updateData(list)
@@ -89,7 +89,7 @@ class TopicActivity : AppCompatActivity() {
                     emptyView.visibility = View.GONE
                 }
             }.onFailure {
-                recyclerView.visibility = View.GONE
+//                recyclerView.visibility = View.GONE
                 emptyView.visibility = View.VISIBLE
             }
         }

@@ -15,7 +15,6 @@
         android:layout_marginTop="20dp"
         android:src="@drawable/logo"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -24,7 +23,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:fontFamily="serif-monospace"
+        android:fontFamily="serif"
         android:text="@string/app_name"
         android:textColor="@color/black"
         android:textSize="30dp"
@@ -33,12 +32,13 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView"
         tools:ignore="HardcodedText" />
 
+
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
-        android:fontFamily="serif-monospace"
+        android:fontFamily="serif"
         android:text="Input Your Email"
         android:textColor="@color/blue_sky"
         app:layout_constraintStart_toStartOf="parent"
@@ -49,7 +49,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/bg_edittext"
-        android:fontFamily="serif-monospace"
+        android:fontFamily="serif"
         android:hint="Enter you email"
         android:textColor="@color/black"
         android:inputType="text"
@@ -76,7 +76,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
-        android:fontFamily="serif-monospace"
+        android:fontFamily="serif"
         android:text="Input Your password"
         android:textColor="@color/blue_sky"
         app:layout_constraintStart_toStartOf="parent"
@@ -89,7 +89,7 @@
         android:layout_height="wrap_content"
         android:background="@drawable/bg_edittext"
         android:hint="Enter you password"
-        android:fontFamily="serif-monospace"
+        android:fontFamily="serif"
         android:textColor="@color/black"
         android:inputType="textPassword"
         android:layout_margin="20dp"
@@ -118,23 +118,45 @@
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
         android:text="LOGIN"
-        android:fontFamily="serif-monospace"
+        android:fontFamily="serif"
         android:backgroundTint="@color/blue_sky"
         android:textColor="@color/white"
         android:background="@drawable/bg_edittext"
         app:layout_constraintTop_toBottomOf="@+id/errorPassword" />
 
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:id="@+id/btn_google_login"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginVertical="20dp"
-        android:fontFamily="serif-monospace"
-        android:text="Login With Google"
-        android:textColor="@color/black"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="20dp"
+        android:background="@drawable/border_8dp_gray"
+        android:padding="15dp"
+        android:gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_login" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_login">
+
+        <ImageView
+            android:id="@+id/icon_google"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/google" />
+
+        <TextView
+            android:id="@+id/text_google_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="8dp"
+            android:layout_toEndOf="@id/icon_google"
+            android:fontFamily="serif"
+            android:text="Login with Google"
+            android:textColor="@color/black" />
+    </RelativeLayout>
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -148,16 +170,27 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Doesn’t have account? "
-            android:fontFamily="serif-monospace"
+            android:fontFamily="serif"
             android:textColor="#666666"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="serif-monospace"
+            android:fontFamily="serif"
             android:textColor="@color/blue_sky"
             android:text="Register" />
     </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:indeterminate="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

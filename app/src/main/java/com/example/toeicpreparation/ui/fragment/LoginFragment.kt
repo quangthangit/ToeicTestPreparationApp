@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ProgressBar
 import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
@@ -15,19 +16,10 @@ import com.example.toeicpreparation.R
 import com.example.toeicpreparation.ui.activity.HomeActivity
 import com.example.toeicpreparation.ui.viewmodel.AuthViewModel
 
-
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [LoginFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class LoginFragment : Fragment() {
-    // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
 
@@ -38,6 +30,8 @@ class LoginFragment : Fragment() {
 
     private lateinit var errorUsername: TextView
     private lateinit var errorPassword: TextView
+
+    private lateinit var progressBar: ProgressBar
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -59,6 +53,8 @@ class LoginFragment : Fragment() {
         errorPassword = view.findViewById(R.id.errorPassword)
 
         btnLogin = view.findViewById(R.id.btn_login)
+
+        progressBar = view.findViewById(R.id.progressBar)
 
         authViewModel = ViewModelProvider(this).get(AuthViewModel::class.java)
 
@@ -82,9 +78,16 @@ class LoginFragment : Fragment() {
                 errorPassword.visibility = View.GONE
             }
 
-            val username = edtUsername.text.toString()
-            val password = edtPassword.text.toString()
-            authViewModel.login(requireContext(),username, password)
+            if (isValid) {
+                val username = edtUsername.text.toString()
+                val password = edtPassword.text.toString()
+                authViewModel.login(requireContext(), username, password)
+            }
+        }
+
+        authViewModel.loading.observe(viewLifecycleOwner) { isLoading ->
+            progressBar.visibility = if (isLoading) View.VISIBLE else View.GONE
+            btnLogin.isEnabled = !isLoading
         }
 
         authViewModel.loginResult.observe(viewLifecycleOwner, { result ->
@@ -92,23 +95,15 @@ class LoginFragment : Fragment() {
                 val intent = Intent(context, HomeActivity::class.java)
                 startActivity(intent)
                 requireActivity().finish()
-            }.onFailure {
-
+            }.onFailure { exception ->
+                Toast.makeText(context, "Login failed: ${exception.message}", Toast.LENGTH_SHORT).show()
             }
         })
+
         return view
     }
 
     companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment LoginFragment.
-         */
-        // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
             LoginFragment().apply {

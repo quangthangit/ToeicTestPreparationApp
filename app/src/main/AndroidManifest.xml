@@ -15,6 +15,9 @@
         android:theme="@style/Theme.TOEICPreparation"
         tools:targetApi="31">
         <activity
+            android:name=".ui.activity.ProggressActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.activity.QuizVocabularyActivity"
             android:exported="false" />
         <activity

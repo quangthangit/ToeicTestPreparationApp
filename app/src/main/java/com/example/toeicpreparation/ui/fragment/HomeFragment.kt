@@ -5,7 +5,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.LinearLayout
 import com.example.toeicpreparation.R
+import com.google.android.material.bottomsheet.BottomSheetDialog
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -35,7 +37,15 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false)
+        var view = inflater.inflate(R.layout.fragment_home, container, false)
+        var btnTest : LinearLayout = view.findViewById<LinearLayout>(R.id.btn_test)
+        btnTest.setOnClickListener {
+            val dialog = BottomSheetDialog(requireContext())
+            val view2 = inflater.inflate(R.layout.bottom_sheet_daily_streak, null)
+            dialog.setContentView(view2)
+            dialog.show()
+        }
+        return view
     }
 
     companion object {

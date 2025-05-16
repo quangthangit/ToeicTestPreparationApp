@@ -18,7 +18,7 @@
             android:background="@drawable/border_image"
             android:layout_margin="5dp"
             android:textColor="@color/white"
-            android:fontFamily="serif-monospace"
+            android:fontFamily="serif"
             android:text="Overview"
             />
 
@@ -28,7 +28,7 @@
             android:background="@drawable/border_image"
             android:layout_margin="5dp"
             android:textColor="@color/white"
-            android:fontFamily="serif-monospace"
+            android:fontFamily="serif"
             android:text="FlashCard"
             />
 
@@ -39,7 +39,7 @@
             android:background="@drawable/border_image"
             android:layout_margin="5dp"
             android:textColor="@color/white"
-            android:fontFamily="serif-monospace"
+            android:fontFamily="serif"
             android:text="Quiz"
             />
 

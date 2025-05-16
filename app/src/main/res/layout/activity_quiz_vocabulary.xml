@@ -30,7 +30,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:fontFamily="sans-serif-medium"
+            android:fontFamily="serif"
             android:text="Quiz"
             android:textColor="@color/black"
             android:textAlignment="center"
@@ -52,6 +52,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:fontFamily="serif"
             android:text="Question 1"
             android:textColor="@color/blue_sky" />
 
@@ -63,6 +64,7 @@
             android:paddingHorizontal="20dp"
             android:paddingVertical="5dp"
             android:text="15 start"
+            android:fontFamily="serif"
             android:textAlignment="textEnd"
             android:textColor="@color/blue_sky" />
     </LinearLayout>
@@ -85,7 +87,7 @@
         android:text="What is the name of the object in the picture?"
         android:layout_margin="20dp"
         android:textColor="@color/black"
-        android:fontFamily="sans-serif-medium"
+        android:fontFamily="serif"
         app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
     <TextView
@@ -96,6 +98,7 @@
         android:layout_marginHorizontal="20dp"
         android:layout_marginVertical="10dp"
         android:textColor="#797979"
+        android:fontFamily="serif"
         app:layout_constraintTop_toBottomOf="@+id/question" />
 
     <LinearLayout
@@ -113,6 +116,7 @@
             android:textColor="@color/black"
             android:elevation="0dp"
             app:elevation="0dp"
+            android:fontFamily="serif"
             android:stateListAnimator="@null"
             android:layout_marginTop="10dp"
             android:background="@drawable/bg_answer"
@@ -123,6 +127,7 @@
             android:layout_height="wrap_content"
             android:textColor="@color/black"
             android:text="Hi"
+            android:fontFamily="serif"
             android:elevation="0dp"
             app:elevation="0dp"
             android:stateListAnimator="@null"
@@ -135,6 +140,7 @@
             android:layout_height="wrap_content"
             android:textColor="@color/black"
             android:text="Crask"
+            android:fontFamily="serif"
             android:elevation="0dp"
             app:elevation="0dp"
             android:stateListAnimator="@null"
@@ -147,6 +153,7 @@
             android:layout_height="wrap_content"
             android:textColor="@color/black"
             android:text="Pulpen"
+            android:fontFamily="serif"
             android:elevation="0dp"
             app:elevation="0dp"
             android:stateListAnimator="@null"

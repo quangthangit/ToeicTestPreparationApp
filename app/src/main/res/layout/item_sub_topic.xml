@@ -47,7 +47,7 @@
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
                     android:text="Contracts"
-                    android:fontFamily="serif-monospace"
+                    android:fontFamily="serif"
                     android:textStyle="bold"
                     android:textColor="#000"/>
 
@@ -55,7 +55,7 @@
                     android:id="@+id/tvStarCount"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="serif-monospace"
+                    android:fontFamily="serif"
                     android:text="0/160 Word"
                     android:textColor="@android:color/holo_blue_dark"
                     android:textSize="14sp"/>
@@ -68,7 +68,7 @@
                 android:layout_height="10dp"
                 android:progress="78"
                 android:max="160"
-                android:progressDrawable="@drawable/progress_bar_blue"
+                android:progressDrawable="@drawable/progress_bar_lesson"
                 android:layout_marginTop="8dp"/>
         </LinearLayout>
     </LinearLayout>

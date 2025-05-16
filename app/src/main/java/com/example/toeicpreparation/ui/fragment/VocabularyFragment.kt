@@ -47,7 +47,7 @@ class VocabularyFragment : Fragment() {
         viewModel.topics.observe(viewLifecycleOwner) { result ->
             result.onSuccess { topics ->
                 if (topics.isEmpty()) {
-                    recyclerView.visibility = View.GONE
+//                    recyclerView.visibility = View.GONE
                     emptyView.visibility = View.VISIBLE
                 } else {
                     adapter.updateTopics(topics)
@@ -55,7 +55,7 @@ class VocabularyFragment : Fragment() {
                     emptyView.visibility = View.GONE
                 }
             }.onFailure {
-                recyclerView.visibility = View.GONE
+//                recyclerView.visibility = View.GONE
                 emptyView.visibility = View.VISIBLE
             }
         }

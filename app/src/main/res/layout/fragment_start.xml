@@ -23,7 +23,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:fontFamily="serif-monospace"
+        android:fontFamily="serif"
         android:text="@string/app_name"
         android:textColor="@color/black"
         android:textSize="30dp"
@@ -48,7 +48,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="20dp"
-            android:fontFamily="serif-monospace"
+            android:fontFamily="serif"
             android:text="Learn the local language\nfor free!"
             android:textAlignment="center"
             android:textColor="@color/white"
@@ -73,7 +73,7 @@
                 android:background="@drawable/bg_btn"
                 android:layout_marginEnd="20dp"
                 android:textColor="@color/white"
-                android:fontFamily="serif-monospace"
+                android:fontFamily="serif"
                 android:text="Register" />
 
             <androidx.appcompat.widget.AppCompatButton
@@ -85,7 +85,7 @@
                 android:layout_marginEnd="20dp"
                 android:backgroundTint="@color/white"
                 android:textColor="@color/blue_sky"
-                android:fontFamily="serif-monospace"
+                android:fontFamily="serif"
                 android:text="Login" />
         </LinearLayout>
 
